@@ -1,0 +1,11 @@
+Develop a wesite to make reader aware about Yoga.
+    site should include introduction, history, Benefits of yoga asana and history and rules to do yoga 
+
+    site should have at least 10 pages. 
+        Home 
+        rest of pages depands concept
+        Developer 
+
+    use html & html 5 
+
+language Hindi/gujarati
