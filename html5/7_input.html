@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Working with inputs</h1>
+    <form action="success.html" method="post" 
+    enctype="multipart/form-data">
+        <table border="2" align="center" width="80%" cellpadding="10">
+            <tr>
+                <td width="35%">
+                    <label for="fullname">Fullname</label>
+                </td>
+                <td>
+                    <input type="text" name="fullname" id="fullname" required placeholder="name fathername surname" />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of birth</label></td>
+                <td><input type="date" name="dob" id="dob" required 
+                    max="2024-08-13" min="2000-01-01" /></td>
+            </tr>
+            <tr>
+                <td><label for="pancard">Pan card (XXXXX9999X)</label></td>
+                <td><input type="text" name="pancard" id="pancard" required placeholder="indian pan card" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" /></td>
+            </tr>
+            <tr>
+                <td><label for="aadharcard">Aadhar card (9999-9999-9999)</label></td>
+                <td><input type="text" name="aadharcard" id="aadharcard" required placeholder="Aadhar card" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" /></td>
+            </tr>
+            <!-- [] bracket, () parenthesie {} braces <> angular bracket -->
+            <tr>
+                <td><label for="url">Website name</label></td>
+                <td><input type="url" name="url" id="url" required placeholder="website name" /></td>
+            </tr>
+            <tr>
+                <td><label for="color">Favourite color</label></td>
+                <td><input type="color" name="color" id="color" required  /></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile</label></td>
+                <td><input type="tel" name="mobile" id="mobile" required placeholder="10 digit mobile no" /></td>
+            </tr>
+            <tr>
+                <td><label for="height">Enter height (in cm)</label></td>
+                <td><input type="number" name="height" id="height" required placeholder="your height in centimeter" /></td>
+            </tr>
+            <tr>
+                <td><label for="weight">Weight (in kg)</label></td>
+                <td><input type="number" name="weight" id="weight" required placeholder="you weight in 2 digit precision" step="0.01" /></td>
+            </tr>
+            <tr>
+                <td><label for="photo">select your 3 passport size photo</label></td>
+                <td><input type="file" name="photo" id="photo" required 
+                    multiple accept=".png,*.jpg" /></td>
+            </tr>
+            
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="submit" value="register">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
