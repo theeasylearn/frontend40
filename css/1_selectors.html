@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* internal stylesheet example */
+
+        /* universal selector */
+        
+        *
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 1px;
+            color:black;
+            margin:0px;
+        }
+
+        /* type selector */
+        h1, h2, h3, h4, h5, h6
+        {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        body 
+        {
+            background-color: #F8EDED;
+        }
+        h1 
+        {
+            background-color: #FF8225;
+            color:white;
+            padding:10px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        /* id selctor style */
+        #hot-and-spicy, #healthy
+        {
+            margin-top:20px;
+            margin-left:20px;
+            margin-right:20px;
+        }
+
+        #hot-and-spicy
+        {
+            border:2px solid #B43F3F;
+            box-shadow: 5px 5px 5px #B43F3F;
+        }
+        #healthy
+        {
+            border:2px solid #00712D;
+            box-shadow: 5px 5px 5px #00712D;
+        }
+
+        /* select each and every div which is direct child of hot and spicy */
+        /* #hot-and-spicy>div 
+        {
+
+        } */
+        /* class selector */
+        .spicy-heading
+        {
+            background-color: #B43F3F;
+            color:white;
+            text-transform: uppercase;
+        }
+        .healthy-heading 
+        {
+            background-color: #00712D;
+            color:white;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page Heading</h1>
+
+    <hr />
+    <section id="hot-and-spicy">
+        <div>
+            <h2 class="spicy-heading">Topic Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem vitae delectus sed repellendus nam eum,
+                in, sequi voluptas maiores neque reiciendis iste praesentium non quis distinctio similique quibusdam? Qui
+                quaerat enim perferendis ex beatae ipsam, nostrum quae recusandae provident iure error? Enim, delectus sequi
+                impedit ex dignissimos beatae pariatur architecto ipsam similique dolorem omnis quam molestiae! Ad quas
+                exercitationem, optio consequuntur, eos perferendis tempore deleniti, mollitia dicta eius maiores enim maxime?
+                Ullam, cumque dolores accusantium repellat distinctio aliquam suscipit pariatur quasi assumenda facere adipisci
+                rerum officiis libero quis cum eveniet placeat aliquid in nisi! Tempore natus perspiciatis magnam magni!</p>
+        </div>
+        
+        <div>
+            <h2 class="spicy-heading">Topic Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem vitae delectus sed repellendus nam eum,
+                in, sequi voluptas maiores neque reiciendis iste praesentium non quis distinctio similique quibusdam? Qui
+                quaerat enim perferendis ex beatae ipsam, nostrum quae recusandae provident iure error? Enim, delectus sequi
+                impedit ex dignissimos beatae pariatur architecto ipsam similique dolorem omnis quam molestiae! Ad quas
+                exercitationem, optio consequuntur, eos perferendis tempore deleniti, mollitia dicta eius maiores enim maxime?
+                Ullam, cumque dolores accusantium repellat distinctio aliquam suscipit pariatur quasi assumenda facere adipisci
+                rerum officiis libero quis cum eveniet placeat aliquid in nisi! Tempore natus perspiciatis magnam magni!</p>
+        </div>
+        
+        <div>
+            <h2 class="spicy-heading">Topic Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem vitae delectus sed repellendus nam eum,
+                in, sequi voluptas maiores neque reiciendis iste praesentium non quis distinctio similique quibusdam? Qui
+                quaerat enim perferendis ex beatae ipsam, nostrum quae recusandae provident iure error? Enim, delectus sequi
+                impedit ex dignissimos beatae pariatur architecto ipsam similique dolorem omnis quam molestiae! Ad quas
+                exercitationem, optio consequuntur, eos perferendis tempore deleniti, mollitia dicta eius maiores enim maxime?
+                Ullam, cumque dolores accusantium repellat distinctio aliquam suscipit pariatur quasi assumenda facere adipisci
+                rerum officiis libero quis cum eveniet placeat aliquid in nisi! Tempore natus perspiciatis magnam magni!</p>
+        </div>
+    </section>
+    <section id="healthy">
+        <div>
+            <h2 class="healthy-heading ">Topic Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem vitae delectus sed repellendus nam
+                eum,
+                in, sequi voluptas maiores neque reiciendis iste praesentium non quis distinctio similique quibusdam? Qui
+                quaerat enim perferendis ex beatae ipsam, nostrum quae recusandae provident iure error? Enim, delectus sequi
+                impedit ex dignissimos beatae pariatur architecto ipsam similique dolorem omnis quam molestiae! Ad quas
+                exercitationem, optio consequuntur, eos perferendis tempore deleniti, mollitia dicta eius maiores enim
+                maxime?
+                Ullam, cumque dolores accusantium repellat distinctio aliquam suscipit pariatur quasi assumenda facere
+                adipisci
+                rerum officiis libero quis cum eveniet placeat aliquid in nisi! Tempore natus perspiciatis magnam magni!</p>
+        </div>
+    
+        <div>
+            <h2 class="healthy-heading ">Topic Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem vitae delectus sed repellendus nam
+                eum,
+                in, sequi voluptas maiores neque reiciendis iste praesentium non quis distinctio similique quibusdam? Qui
+                quaerat enim perferendis ex beatae ipsam, nostrum quae recusandae provident iure error? Enim, delectus sequi
+                impedit ex dignissimos beatae pariatur architecto ipsam similique dolorem omnis quam molestiae! Ad quas
+                exercitationem, optio consequuntur, eos perferendis tempore deleniti, mollitia dicta eius maiores enim
+                maxime?
+                Ullam, cumque dolores accusantium repellat distinctio aliquam suscipit pariatur quasi assumenda facere
+                adipisci
+                rerum officiis libero quis cum eveniet placeat aliquid in nisi! Tempore natus perspiciatis magnam magni!</p>
+        </div>
+    
+        <div>
+            <h2 class="healthy-heading ">Topic Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem vitae delectus sed repellendus nam
+                eum,
+                in, sequi voluptas maiores neque reiciendis iste praesentium non quis distinctio similique quibusdam? Qui
+                quaerat enim perferendis ex beatae ipsam, nostrum quae recusandae provident iure error? Enim, delectus sequi
+                impedit ex dignissimos beatae pariatur architecto ipsam similique dolorem omnis quam molestiae! Ad quas
+                exercitationem, optio consequuntur, eos perferendis tempore deleniti, mollitia dicta eius maiores enim
+                maxime?
+                Ullam, cumque dolores accusantium repellat distinctio aliquam suscipit pariatur quasi assumenda facere
+                adipisci
+                rerum officiis libero quis cum eveniet placeat aliquid in nisi! Tempore natus perspiciatis magnam magni!</p>
+        </div>
+    </section>
+</body>
+</html>
