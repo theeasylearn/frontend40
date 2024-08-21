@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            letter-spacing: 1px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        /* class selector style */
+        .box {
+            border: 1px dotted red;
+            /* round shape tag */
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: yellow;
+            /* vertically text center */
+            display: flex;
+            align-items: center;
+            /* horizontally text center (work only if display:flex) */
+            justify-content: center;
+        }
+
+        .top_left {
+            position: absolute;
+            z-index: 3;
+        }
+
+        .top_right {
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+
+        .bottom_right {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .bottom_left {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        .fifth {
+            position: absolute;
+            left: 70px;
+            top: 70px;
+            background-color: aliceblue;
+            z-index: 2;
+        }
+
+        .sixth {
+            position: absolute;
+            left: 120px;
+            top: 120px;
+            background-color: blue;
+            z-index: 5;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box top_left"><span>First</span></div>
+    <div class="box fifth"><span>fifth</span></div>
+    <div class="box sixth"><span>sixth</span></div>
+    <div class="box top_right"><span>second</span></div>
+    <div class="box bottom_left"><span>third</span></div>
+    <div class="box bottom_right"><span>fourth</span></div>
+</body>
+
+</html>
