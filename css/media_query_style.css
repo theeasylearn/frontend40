@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+body {
+    background-color: #f3ead3;
+}
+
+article {
+    background-color: #ebdbb4;
+    margin: 10px;
+    width: 25%
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktop */
+@media (min-width: 1281px) {
+    /* code in this block will be applied only if device width>1281 */
+    article {
+            width: calc(20% - 20px);
+        }
+}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* code in this block will be applied only if device width>1025 and <1280 */
+    article {
+            width: calc(25% - 20px);
+        }
+}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* code in this block will be applied only if device width>768 and <1024 */
+    article {
+        width: calc(33% - 20px);
+    }
+}
+
+/* ##Device = Low Resolution Tablets,  ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /* code in this block will be applied only if device width>481 and <767 */
+    article {
+        width: calc(50% - 20px);
+    }
+}
+
+/*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /* code in this block will be applied only if device width>320 and <480 */
+    article {
+        width: calc(100% - 10px);
+    }
+}
