@@ -33,7 +33,8 @@ body {
 article {
     background-color: #ebdbb4;
     margin: 10px;
-    width: 25%
+    width: 25%;
+    box-shadow: 5px 5px 5px gray;
 }
 
 section {
@@ -45,7 +46,21 @@ img {
     width: 100%;
     object-fit: cover;
 }
-
+section>article>header 
+{
+    background-color: brown;
+    color:white;
+    text-align: center;
+    padding:10px 0px;
+}
+section>article>footer 
+{
+    background-color: brown;
+    color:white;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
 /* ##Device = Desktops ##Screen = 1281px to higher resolution desktop */
 @media (min-width: 1281px) {
     /* code in this block will be applied only if device width>1281 */
@@ -68,6 +83,10 @@ img {
     /* code in this block will be applied only if device width>768 and <1024 */
     article {
         width: calc(33% - 20px);
+        article>p 
+        {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -78,6 +97,10 @@ img {
     article {
         width: calc(50% - 20px);
     }
+    article>p 
+    {
+        font-size: 1.4rem;
+    }
 }
 
 /*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
@@ -86,5 +109,9 @@ img {
     /* code in this block will be applied only if device width>320 and <480 */
     article {
         width: calc(100% - 10px);
+    }
+    article>p 
+    {
+        font-size: 1.6rem;
     }
 }
