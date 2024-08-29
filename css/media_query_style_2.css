@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cornsilk;
+}
+
+/* apply style to div which is direct child of section */
+section>div {
+    height: 200px;
+    background-color: chocolate;
+    font-size: 3rem;
+}
+section
+{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+#slider 
+{
+   grid-area: slider;
+}
+
+#category1
+{
+    grid-area: category1;
+}
+#category2
+{
+    grid-area: category2;
+}
+#category3
+{
+    grid-area: category3;
+}
+#category4
+{
+    grid-area: category4;
+}
+#product1
+{
+    grid-area: product1;
+}
+#product2
+{
+    grid-area: product2;
+}
+#blog
+{
+    grid-area: blog;
+}
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktop */
+@media (min-width: 1281px) {
+    /* code in this block will be applied only if device width>1281 */
+    section {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas: 
+            "slider slider slider slider"
+            "category1 category2 category3 category4"
+            "product1 product1 product2 product2"
+            "blog blog blog blog";
+    }
+}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* code in this block will be applied only if device width>1025 and <1280 */
+    section {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas: 
+            "slider slider slider slider"
+            "category1 category2 category3 category4"
+            "product1 product1 product2 product2"
+            "blog blog blog blog";
+    }
+}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* code in this block will be applied only if device width>768 and <1024 */
+    section {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "slider slider"
+            "category1 category2"
+            "category3 category4"
+            "product1 product2"
+            "blog blog";
+    }
+}
+
+/* ##Device = Low Resolution Tablets,  ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    /* code in this block will be applied only if device width>481 and <767 */
+    section
+   {
+    
+    grid-template-rows: 8;
+    grid-template-areas: "slider"
+    "category1"
+    "category2"
+    "category3"
+    "category4"
+    "product1"
+    "product2"
+    "blog"
+   }
+}
+
+/*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+    /* code in this block will be applied only if device width>320 and <480 */
+   section
+   {
+        grid-template-rows: 8;
+        grid-template-areas: "slider"
+        "category1"
+        "category2"
+        "category3"
+        "category4"
+        "product1"
+        "product2"
+        "blog"
+   }
+}
