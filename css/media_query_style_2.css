@@ -12,7 +12,7 @@ body {
 
 /* apply style to div which is direct child of section */
 section>div {
-    height: 200px;
+    height: 100px;
     background-color: chocolate;
     font-size: 3rem;
 }
@@ -101,7 +101,7 @@ section
     section
    {
     
-    grid-template-rows: 8;
+    grid-template-columns: 100%;
     grid-template-areas: "slider"
     "category1"
     "category2"
@@ -118,7 +118,7 @@ section
     /* code in this block will be applied only if device width>320 and <480 */
    section
    {
-        grid-template-rows: 8;
+        grid-template-columns: 100%;
         grid-template-areas: "slider"
         "category1"
         "category2"

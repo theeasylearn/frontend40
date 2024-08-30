@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu
+        {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+        #menu>li 
+        {
+            width:200px;
+        }
+        #menu>li>a:link 
+        {
+            background-color: blue;
+            color:white;
+            padding:20px;
+            text-transform: uppercase;
+            border-radius: 10px;
+        }
+        #menu>li>a:visited
+        {
+            color:yellow;
+        } 
+        #menu>li>a:hover 
+        {
+            box-shadow: 10px 10px 5px black;
+            font-size: 1.5rem;
+        }
+        #menu>li>a:active 
+        {
+            background-color: yellow;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example of psudo class</h1>
+    <ul id="menu">
+        <li><a href="http://www.google.com">google</a></li>
+        <li><a href="http://www.amazon.com">amazon</a></li>
+        <li><a href="http://www.ibm.com">ibm</a></li>
+        <li><a href="http://www.apple.com">apple</a></li>
+        <li><a href="http://www.microsoft.com">microsoft</a></li>
+    </ul>
+    <a href="http://theeasylearn.com">the easylearn academy</a>
+</body>
+</html>
