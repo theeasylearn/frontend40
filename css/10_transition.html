@@ -44,7 +44,10 @@
         {
             transition: height 1s ease-in-out, width 1s ease-in-out
         }
-      
+        #fourth
+        {
+            transition: transform 1s ease-in-out;
+        }
         #second:hover 
         {
             height: 150px;
@@ -56,6 +59,42 @@
         {
             transform: scaleX(2) scaleY(2);
         }
+        #fourth:hover
+        {
+            /* transform: rotate(360deg); */
+            /* transform: rotatex(180deg); */
+            transform: rotatey(360deg);
+        }
+        #picture 
+        {
+            height: 256px;
+            width:256px;
+            border: 1px solid black;
+            text-align: center; /* put text inside tag in center */
+            margin:auto;  /* put tag itself  in center inside its parent  (in this case body)*/
+            background-image: url('images/earth.png');
+            transition: transform 1s ease-in;
+        }
+        #picture:hover 
+        {
+            transform: rotateY(360deg);
+            background-image: url('images/earth_color.png');;
+        }
+        #product
+        {
+            height: 256px;
+            width:256px;
+            margin:auto; 
+            overflow: hidden;
+        }
+        img 
+        {
+            transition: transform 0.5s ease;
+        }
+        #product>img:hover 
+        {
+            transform: scale(1.5,1.5);
+        }
     </style>
 </head>
 
@@ -66,6 +105,11 @@
         <div id="third">effect</div>
         <div id="fourth">effect</div>
     </section>
+    <div id="picture">
+    </div>
+    <div id="product">
+        <img src="images//earth_color.png" />
+    </div>
 </body>
 
 </html>
