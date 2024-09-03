@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes heart-beat {
+            from {
+                transform: scale(1, 1);
+            }
+
+            to {
+                transform: scale(1.25, 1.25);
+            }
+
+        }
+        .beats {
+            animation: heart-beat 1.2s ease-in 0s infinite reverse both;
+            /* animation: 3s ease-in 1s infinite reverse both running slidein; */
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to 
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .spin 
+        {
+            animation: rotate 2s ease-in-out 0s infinite running  both;
+        }
+        @keyframes blinking {
+            0%
+            {
+                background-color: red;
+                color:yellow;
+            }
+            25% 
+            {
+                background-color: yellow;
+                color:red;
+            }
+            50% 
+            {
+                background-color: blue;
+                color:yellow;
+            }
+            75% 
+            {
+                background-color: green;
+                color:black;
+            }
+            100% 
+            {
+                background-color: black;
+                color:white;
+            }
+        }
+        .blink 
+        {
+            display: inline-block;
+            width:100px;
+            height: 50px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 30px;
+            animation: blinking 1s ease-in-out 0s infinite reverse  both;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="beats" src="images/heart.png" alt="" /> <br /> <br />
+    <img class="spin" src="images/wheel.png" alt="" />
+    <div class="blink">SALE</div>
+</body>
+
+</html>
