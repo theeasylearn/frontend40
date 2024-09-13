@@ -3,3 +3,11 @@
 2) develop web page will display 3 team members per line for large and medium screen. 2 team members for small screen and 1 team members for mobile screen. there will 6 team members. display team member name, qualification experience and photo.
 
 3) develop web page that will display 6 team per line for large screen, 4 team per line for medium screen, 3 team per line on small screen and 1 team per line on mobile screen. there will be 10 teams. display each IPL team name and logo. 
+
+4) use card in above 3 exercise 
+
+5) create page to change password (use vertical form)
+    input are current, new, confirm new password
+
+6) create page for payment page in online shop app (use vertical form)
+    use internet to findout input

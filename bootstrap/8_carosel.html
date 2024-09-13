@@ -9,17 +9,42 @@
 </head>
 <body>
     <!-- Carosel -->
-    <div id="carouselExample" class="carousel slide">
+    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 3"></button>
+      </div>
+    
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" data-bs-interval="5000">
             <img src="http://picsum.photos/1200/200?random=1" class="d-block w-100" alt="http://picsum.photos/1200/200?random=1">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>MERN</h2>
+              <p>Mysql mongodb express js Reactjs Nodejs</p>
+            </div>
+      
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="3000">
             <img src="http://picsum.photos/1200/200?random=2" class="d-block w-100" alt="http://picsum.photos/1200/200?random=1">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>UI UX</h2>
+              <p>Photoshop, Illustrator, indesign, xd, figma etc</p>
+            </div>
+      
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="3000">
             <img src="http://picsum.photos/1200/200?random=3" class="d-block w-100" alt="http://picsum.photos/1200/200?random=1">
           </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="http://picsum.photos/1200/200?random=4" class="d-block w-100" alt="http://picsum.photos/1200/200?random=1">
+          </div>
+          <div class="carousel-item">
+            <img src="http://picsum.photos/1200/200?random=5" class="d-block w-100" alt="http://picsum.photos/1200/200?random=1">
+          </div>
+          
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
