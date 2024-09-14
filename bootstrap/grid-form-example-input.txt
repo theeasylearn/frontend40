@@ -1,0 +1,20 @@
+Register
+    1st line
+        upto small screen 3 input per line then 1 input per line
+        name
+        fathername
+        lastname
+    2nd line
+        email
+        mobile
+        upi
+    3rd line
+        gender
+        dob
+        photo
+    4th    
+        city
+        pincode
+        address
+        button
+    
