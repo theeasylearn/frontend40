@@ -17,38 +17,48 @@
                     <div class="card-body">
                         <!-- enctype="multipart/form-data" is required when we accept file as input -->
                         <form action="success.html" method="post" enctype="multipart/form-data">
-                       
-
                             <div class="row mb-3">
                                 <div class="col-12 col-sm-4">
-                                    <label for="name" class="form-label">First name</label>
-                                    <input type="text" name="name" id="name" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="text" name="name" id="name" class="form-control" required placeholder="First name" />
+                                        <label for="name" class="form-label">First name</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-4">
-                                    <label for="fathername" class="form-label">Father name</label>
-                                    <input type="text" name="fathername" id="fathername" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="text" name="fathername" id="fathername" class="form-control" required placeholder="Father name" />
+                                        <label for="fathername" class="form-label">Father name</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-4">
-                                    <label for="surname" class="form-label">Surname</label>
-                                    <input type="text" name="surname" id="surname" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="text" name="surname" id="surname" class="form-control" required placeholder="Surname" />
+                                        <label for="surname" class="form-label">Surname</label>
+                                    </div>
                                 </div>
                             </div>
-
+                        
                             <div class="row mb-3">
                                 <div class="col-12 col-sm-4">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="email" name="email" id="email" class="form-control" required placeholder="Email" />
+                                        <label for="email" class="form-label">Email</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-4">
-                                    <label for="upi" class="form-label">UPI id</label>
-                                    <input type="text" name="upi" id="upi" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="text" name="upi" id="upi" class="form-control" required placeholder="UPI id" />
+                                        <label for="upi" class="form-label">UPI id</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-4">
-                                    <label for="mobile" class="form-label">Photo</label>
-                                    <input type="tel" name="mobile" id="mobile" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="tel" name="mobile" id="mobile" class="form-control" required placeholder="Mobile" />
+                                        <label for="mobile" class="form-label">Mobile</label>
+                                    </div>
                                 </div>
                             </div>
-
+                        
                             <div class="row mb-3">
                                 <div class="col-12 col-sm-4">
                                     <label for="" class="mb-2">Gender</label><br>
@@ -60,37 +70,43 @@
                                         <input type="radio" name="gender" id="female" class="form-check-input" required value="0" />
                                         <label for="female" class="form-check-label">Female</label>
                                     </div>
-                                    
                                 </div>
                                 <div class="col-12 col-sm-4">
-                                    <label for="dob" class="form-label">Birth date</label>
-                                    <input type="date" name="dob" id="dob" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="date" name="dob" id="dob" class="form-control" required placeholder="Birth date" />
+                                        <label for="dob" class="form-label">Birth date</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-4">
                                     <label for="photo" class="form-label">Photo</label>
-                                    <input type="file" name="photo" id="photo" class="form-control" required accept="image/*" />
+                                    <input type="file" name="photo" id="photo" class="form-control-file" required accept="image/*" />
                                 </div>
                             </div>
+                        
                             <div class="row">
                                 <div class="col-12 col-sm-3">
-                                    <label for="city" class="form-label">City</label>
-                                    <input type="text" name="city" id="city" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="text" name="city" id="city" class="form-control" required placeholder="City" />
+                                        <label for="city" class="form-label">City</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-3">
-                                    <label for="pincode" class="form-label">Pincode</label>
-                                    <input type="number" name="pincode" id="pincode" class="form-control" required />
+                                    <div class="form-floating">
+                                        <input type="number" name="pincode" id="pincode" class="form-control" required placeholder="Pincode" />
+                                        <label for="pincode" class="form-label">Pincode</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-4 mb-3 mb-sm-0">
                                     <label for="address" class="form-label">Address</label>
-                                    <textarea type="text" name="address" id="address" class="form-control" required>
-                                    </textarea>
+                                    <textarea type="text" name="address" id="address" class="form-control" required></textarea>
                                 </div>
                                 <div class="col-12 col-sm-2">
                                     <button type="submit" class="btn btn-warning w-100">Let Sign up</button>
-                                    <button type="reset" class="btn btn-dark w-100 mt-2">clear all</button>
+                                    <button type="reset" class="btn btn-dark w-100 mt-2">Clear all</button>
                                 </div>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
