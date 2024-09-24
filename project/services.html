@@ -28,6 +28,8 @@
     <!-- core style css -->
     <link href="site/css/styles.css" rel="stylesheet" />
 
+    <!-- aos (animate on scroll library)-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
 </head>
 
 <body>
@@ -80,7 +82,7 @@
         </header>
 
           <!-- Page Heading -->
-          <section class="page-title-section bg-img cover-background top-position1 secondary-overlay" data-overlay-dark="7" data-background="site/img/banner/page-title-01.jpg">
+        <section class="page-title-section bg-img cover-background top-position1 secondary-overlay" data-overlay-dark="7" data-background="site/img/banner/page-title-01.jpg">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
@@ -99,10 +101,10 @@
         <div class="container my-5">
             <div class="row">
                 <div class="col-12">
-                    <div class="card mb-3">
+                    <div class="card mb-3 shadow" data-aos="fade-right">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Horoscope Reading">
+                                <img src="site/img/Horoscope-Reading.jpg" class="img-fluid rounded-start" alt="Horoscope Reading">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -114,25 +116,26 @@
                     </div>
                 
                     <!-- Palm Reading Card -->
-                    <div class="card mb-3">
+                    <div class="card mb-3 shadow" data-aos="fade-left">
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Palm Reading">
-                            </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Palm Reading</h5>
                                     <p class="card-text">Palm reading, or Hast Rekha Shastra, is a centuries-old practice in Indian astrology used to analyze an individual's personality, potential future, and life path through the lines and shapes on their palms. Each line on the palm—such as the life line, heart line, and fate line—tells a unique story about an individual’s journey. An experienced Indian astrologer can interpret the depth, length, and curvature of these lines to provide insight into one’s health, emotional well-being, and life events. Palm reading also considers the shape, texture, and color of the palm, along with the mounts associated with planetary influences.</p>
                                 </div>
                             </div>
+
+                            <div class="col-md-4">
+                                <img src="site/img/Plam-Reading.webp" class="img-fluid rounded-start" alt="Palm Reading">
+                            </div>
                         </div>
                     </div>
                 
                     <!-- Tarot Reading Card -->
-                    <div class="card mb-3">
+                    <div class="card mb-3 shadow" data-aos="fade-right">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Tarot Reading">
+                                <img src="site/img/tarrot_reading.jpg" class="img-fluid rounded-start" alt="Tarot Reading">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -144,16 +147,16 @@
                     </div>
                 
                     <!-- Kundli Matching Card -->
-                    <div class="card mb-3">
+                    <div class="card mb-3 shadow" data-aos="fade-left">
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Kundli Matching">
-                            </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Kundli Matching</h5>
                                     <p class="card-text">Kundli matching, also known as Gun Milan, is an essential practice in Indian astrology, especially when it comes to marriage. It involves comparing the birth charts of two individuals to determine their compatibility for a harmonious and long-lasting relationship. The process examines the positions of planets and stars at the time of each person’s birth to assess factors like emotional compatibility, mutual understanding, physical attraction, and overall marital harmony. In India, kundli matching is considered crucial for ensuring a happy and prosperous married life.</p>
                                 </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="site/img/Kundli-Matching.png" class="img-fluid rounded-start" alt="Kundli Matching">
                             </div>
                         </div>
                     </div>
@@ -303,5 +306,14 @@
 
     <!-- all js include end -->
     
+    <!-- aos javascript cdn and code -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>  
+      AOS.init({
+        // configuration related options
+        delay: 1000, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+      });
+    </script>
 </body>
 </html>
