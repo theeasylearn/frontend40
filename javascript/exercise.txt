@@ -1,0 +1,10 @@
+1) write a program to calculate & display simple interest of given amount,rate,year in javascript using prompt and document.write 
+
+
+2) write a program to take hours and minutes and calculate and display total minutes in javascript using prompt and document.write 
+
+
+3) write a program to take total minutes and convert hours and minutes in javascript using prompt and document.write 
+    example total minutes 215
+    hours : 3 
+    minutes : 35

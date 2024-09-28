@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>confirm dialogbox</h1>
+    <hr>
+    <table border="1" align="center" width="100%">
+        <tr>
+            <td>Click on subscribe button to start our service @ 100 per month</td>
+            <td>
+                <button type="button" onclick="StartSubscription();">Subscribe</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        // user defined function
+        //function definition
+        function StartSubscription()
+        {
+            //function body
+            //current page replace with success.html
+            let response = confirm('are you sure, you want do this?');
+            if(response == true)
+                window.location = "success.html";
+            else 
+                alert('please buy our subscription at your convenience');
+
+        }
+    </script>
+</body>
+</html>
