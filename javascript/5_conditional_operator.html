@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>conditional Operator ?</h1>
+    <hr />
+    <script>
+        //convert user given 24 hours time into 12 hours format time 
+        let hours = prompt("Enter hours in 24 hours format");
+        hours = parseInt(hours); //convert string into integer and returns
+        // let output = null;
+        // if (hours > 12)  // 10
+        // {
+        //     output = (hours - 12) + " PM";
+        // }
+        // else 
+        // {
+        //     output = hours + " AM";
+        // }
+        // document.write(output);
+        // OR 
+        document.write((hours>12) ? (hours - 12) + " PM" : hours + " AM");
+
+    </script>
+</body>
+
+</html>
