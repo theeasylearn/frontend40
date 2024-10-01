@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>working with innerhtml </h1>
+    <hr />
+    <table border="1" align="center" width="100%">
+        <tr>
+            <td>
+                <input type="button" value="display Rastra geet" onclick="displayGeet();" />
+            </td>
+            <td>
+                <input type="button" value="display mantra(s)" onclick="displayMantra();" />
+            </td>
+            <td>
+                <input type="button" value="display numbers" onclick="displayNumber();" />
+            </td>
+            <td>
+                <input type="button" value="calculate total" />
+            </td>
+        </tr>
+        <tr>
+            <td id="td1"></td>
+            <td>
+                <p>1st mantra</p>
+                <p>2nd mantra</p>
+                <p>3rd mantra</p>
+            </td>
+            <td>
+                <ul>
+                    <li name="numbers"></li>
+                    <li name="numbers"></li>
+                    <li name="numbers"></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        //user defined function 
+        function displayGeet() {
+            let content = `
+                    जन गण मन अधिनायक जय हे <br/>
+                    भारत भाग्य विधाता। <br/>
+
+                    पंजाब सिन्ध गुजरात मराठा <br/>
+                    द्रविड़ उत्कल बंग। <br/>
+                    विंध्य हिमाचल यमुना गंगा <br/>
+                    उच्छल जलधि तरंग। <br/>
+
+                    तव शुभ नामे जागे <br/>
+                    तव शुभ आशीष मागे। <br/>
+
+                    गाहे तव जयगाथा। <br/>
+
+                    जन गण मंगलदायक जय हे <br/>
+                    भारत भाग्य विधाता। <br/>
+
+                    जय हे, जय हे, जय हे <br/>
+                    जय जय जय जय हे॥`
+            document.getElementById('td1').innerHTML = content;
+        }
+        function displayMantra() {
+            let mantra1 = `
+            ॐ भूर् भुवः स्वः। <br/>
+            तत्सवितुर्वरेण्यं। <br/>
+            भर्गो देवस्य धीमहि। <br/>
+            धियो यो नः प्रचोदयात्॥ <br/>`;
+            let mantra2 = `ॐ नमः शिवाय।`
+            let mantra3 = `ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्। <br/>
+उर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय मामृतात्॥`
+
+            //create an array/list that has reference of paragraphs tag 
+            let paragraphs = document.getElementsByTagName('p');
+            paragraphs[0].innerHTML = mantra1;
+            paragraphs[1].innerHTML = mantra2;
+            paragraphs[2].innerHTML = mantra3;
+        }
+        function displayNumber()
+        {
+             //create an array/list that has reference of tag  whose name is numbers
+            var list = document.getElementsByName('numbers');
+            list[0].innerHTML = 10;
+            list[1].innerHTML = 50;
+            list[2].innerHTML = 200;
+        }
+    </script>
+</body>
+
+</html>
