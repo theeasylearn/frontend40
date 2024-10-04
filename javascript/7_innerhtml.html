@@ -22,7 +22,7 @@
                 <input type="button" value="display numbers" onclick="displayNumber();" />
             </td>
             <td>
-                <input type="button" value="calculate total" />
+                <input type="button" value="calculate total" onclick="calculateTotal();" />
             </td>
         </tr>
         <tr>
@@ -34,12 +34,14 @@
             </td>
             <td>
                 <ul>
-                    <li name="numbers"></li>
-                    <li name="numbers"></li>
-                    <li name="numbers"></li>
+                    <li class='list-item' name="numbers"></li>
+                    <li class='list-item' name="numbers"></li>
+                    <li class='list-item' name="numbers"></li>
                 </ul>
             </td>
-            <td></td>
+            <td>
+                <h1 id="grandtotal">Grand Total = </h1>
+            </td>
         </tr>
     </table>
 
@@ -83,13 +85,24 @@
             paragraphs[1].innerHTML = mantra2;
             paragraphs[2].innerHTML = mantra3;
         }
-        function displayNumber()
-        {
-             //create an array/list that has reference of tag  whose name is numbers
+        function displayNumber() {
+            //create an array/list that has reference of tag  whose name is numbers
             var list = document.getElementsByName('numbers');
             list[0].innerHTML = 10;
             list[1].innerHTML = 50;
             list[2].innerHTML = 200;
+        }
+
+        function calculateTotal() {
+            let listItems = document.getElementsByClassName('list-item');
+            console.log(listItems);
+            let temp = 0;
+            for (let position = 0; position < listItems.length; position++) {
+                // console.log(position);
+                // console.log(listItems[position].innerHTML);
+                temp = temp + parseInt(listItems[position].innerHTML);
+            }
+            document.getElementById('grandtotal').innerHTML = temp;
         }
     </script>
 </body>

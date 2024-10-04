@@ -14,3 +14,7 @@
 5)  write a program to display whether given number is positive or negative using javascript (use conditional operator ?).
 
 6)  write a program to display square of odd number and qube of even number using javascript (use conditional operator ?).
+
+7) write a program to calculate and display compound interest of given amount, rate, year 
+
+8)
