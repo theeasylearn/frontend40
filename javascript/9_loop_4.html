@@ -2,27 +2,29 @@
     step 1 create design
     step 2 delete code which has pattern(pattern same code with some changes)
     step 3 repeat code which has pattern using loop
+    step 4 use loop for code which is repetitive
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        td 
-        {
+        td {
             font-size: 72px;
             text-align: center;
         }
-        th 
-        {
+
+        th {
             font-size: 36px;
-            color:blue;
+            color: blue;
         }
     </style>
 </head>
+
 <body>
     <h1>example of loop</h1>
     <table width="100%" align="center" cellpadding="10" border="1">
@@ -37,34 +39,36 @@
                 <th>SAT</th>
             </tr>
         </thead>
-        <tbody >
+        <tbody>
         </tbody>
     </table>
     <script>
         //create user defined function
-        function generateCalendar()
-        {
-            let content = `<tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                </tr>`;
-                //store reference of tbody tag in variable tbody
-                let tbody = document.getElementsByTagName('tbody')[0];
-                //put above code inside tbody
-                tbody.innerHTML= tbody.innerHTML + content;
-                tbody.innerHTML= tbody.innerHTML + content;
-                tbody.innerHTML= tbody.innerHTML + content;
-                tbody.innerHTML= tbody.innerHTML + content;
-                tbody.innerHTML= tbody.innerHTML + content;
+        function generateCalendar() {
+
+            //store reference of tbody tag in variable tbody
+            let tbody = document.getElementsByTagName('tbody')[0];
+            //put above code inside tbody
+            let count = 1;
+            while (count <= 5) {
+                let content = `<tr>`
+                content = content + `<td>1</td>`;
+                content = content + `<td>1</td>`;
+                content = content + `<td>1</td>`;
+                content = content + `<td>1</td>`;
+                content = content + `<td>1</td>`;
+                content = content + `<td>1</td>`;
+                content = content + `<td>1</td>`;
+                content = content  + `</tr>`;
+                tbody.innerHTML = tbody.innerHTML + content;
+                count = count + 1;
+            }
+
         }
 
         //function call
         generateCalendar();
     </script>
 </body>
+
 </html>
