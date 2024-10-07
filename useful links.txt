@@ -31,8 +31,8 @@ for color pallets
 https://colorhunt.co/
 
 
- for html, css, javascript 
- https://developer.mozilla.org
+for html, css, javascript 
+https://developer.mozilla.org
 
  for css 
  https://developer.mozilla.org/en-US/docs/Web/CSS
@@ -79,3 +79,8 @@ http://html5test.com/
 
 
 https://alternativeto.net/
+
+
+for javascript 
+https://javascript.info/
+
