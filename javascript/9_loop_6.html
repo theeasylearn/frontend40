@@ -4,6 +4,7 @@
     step 3 repeat code which has pattern using loop
     step 4 use loop for code which is repetitive
     step 5 again use loop for code which is repetitive 
+    step 6 decide day of week of the first day of month
 -->
 
 <!DOCTYPE html>
@@ -48,19 +49,42 @@
         function generateCalendar() {
             //store reference of tbody tag in variable tbody
             let tbody = document.getElementsByTagName('tbody')[0];
-            //put above code inside tbody
+            //store 1st day of month into Date of object
+            let month = 12;
+            let firstDayOfMonth = new Date(`2024-${month}-01`);
+            let dayOfWeek = firstDayOfMonth.getDay(); //2
+            console.log(dayOfWeek); //2
             let count = 1;
             let day=1;
-            while (count <= 5) {
+            let lastDayOfMonth = 31;
+            let row = 5;
+            if(dayOfWeek>=5)
+                row = 6;
+            if(month==4 || month==6 || month== 9 || month==11)
+                lastDayOfMonth = 30;
+            else if(month==2)
+            {
+                lastDayOfMonth = 28
+            }
+            //outer loop
+            while (count <= row) {
                 let content = ``
                 let anotherCount=1;
+                //inner loop
                 do    
                 {
+                    anotherCount= anotherCount + dayOfWeek;
+                    //inner loop
+                    while(dayOfWeek>0) // 0>0
+                    {
+                        content = content + `<td></td>`;
+                        dayOfWeek--; 
+                    }
                     content = content + `<td>${day}</td>`;
                     anotherCount=anotherCount+1;
                     day=day+1;
                 }
-                while(anotherCount<=7 && day<=31);
+                while(anotherCount<=7 && day<=lastDayOfMonth);
                 content = `<tr>` + content  + `</tr>`;
                 tbody.innerHTML = tbody.innerHTML + content;
                 count = count + 1;

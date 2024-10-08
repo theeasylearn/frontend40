@@ -1,0 +1,137 @@
+<!-- 
+    step 1 create design
+    step 2 delete code which has pattern(pattern same code with some changes)
+    step 3 repeat code which has pattern using loop
+    step 4 use loop for code which is repetitive
+    step 5 again use loop for code which is repetitive 
+    step 6 decide day of week of the first day of month
+    step 7 take month and year as input from user 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            font-size: 72px;
+            text-align: center;
+        }
+
+        th {
+            font-size: 36px;
+            color: blue;
+        }
+        form
+        {
+            padding:10px;
+            display: flex;
+            justify-content: space-around;
+            border:1px solid black;
+            background-color: aliceblue;
+            margin-bottom: 10px;
+        }
+        input 
+        {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>example of loop</h1>
+    <form action="" onsubmit="return generateCalendar();">
+        <select name="month" id="month" required>
+            <option value="">select month</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <select name="year" id="year" required>
+            <option value="">select year</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+        </select>
+        <input type="submit" value="Generate Calendar" />
+    </form>
+    <table width="100%" align="center" cellpadding="10" border="1">
+        <thead>
+            <tr>
+                <th>SUN</th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th>SAT</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        //create user defined function
+        function generateCalendar() {
+            //store reference of tbody tag in variable tbody
+            let tbody = document.getElementsByTagName('tbody')[0];
+            //store 1st day of month into Date of object
+            let month = document.getElementById('month').value;
+            let year = document.getElementById('year').value;
+            let firstDayOfMonth = new Date(`${year}-${month}-01`);
+            let dayOfWeek = firstDayOfMonth.getDay(); //2
+            console.log(dayOfWeek); //2
+            let count = 1;
+            let day = 1;
+            let lastDayOfMonth = 31;
+            let row = 5;
+            if (dayOfWeek >= 5)
+                row = 6;
+            if (month == 4 || month == 6 || month == 9 || month == 11)
+                lastDayOfMonth = 30;
+            else if (month == 2) {
+                lastDayOfMonth = 28
+            }
+            //outer loop
+            while (count <= row) {
+                let content = ``
+                let anotherCount = 1;
+                //inner loop
+                do {
+                    anotherCount = anotherCount + dayOfWeek;
+                    //inner loop
+                    while (dayOfWeek > 0) // 0>0
+                    {
+                        content = content + `<td></td>`;
+                        dayOfWeek--;
+                    }
+                    content = content + `<td>${day}</td>`;
+                    anotherCount = anotherCount + 1;
+                    day = day + 1;
+                }
+                while (anotherCount <= 7 && day <= lastDayOfMonth);
+                content = `<tr>` + content + `</tr>`;
+                tbody.innerHTML = tbody.innerHTML + content;
+                count = count + 1;
+            }
+
+            return false; //to stop refreshing webpage
+        }
+        
+    </script>
+</body>
+
+</html>
