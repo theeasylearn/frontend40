@@ -5,11 +5,7 @@
 //     return tagId;
 // }
 // or
-let $ = function(id)
-{
-    let tagId= document.getElementById(id);
-    return tagId;
-}
+
 
 function generateCalendar() {
     //store reference of tbody tag in variable tbody

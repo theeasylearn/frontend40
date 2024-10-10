@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: aliceblue;
+            padding: 10px;
+            width: 50%;
+            margin: auto;
+
+        }
+
+        td {
+            border: 1px solid blue;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .input-box {
+            width: 90%;
+            padding: 5px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Example of arrow functions</h1>
+    <hr />
+    <form action="" onsubmit="return calculateVolume();">
+        <table>
+            <tr>
+                <td>
+                    <h1>Volume Calculator</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="input-box" type="number" name="length" id="length" required placeholder="Length" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="input-box" type="number" name="width" id="width" required placeholder="width" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="input-box" type="number" name="height" id="height" required placeholder="height" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" id="submit" required value="Calculate Volume" />
+                </td>
+            </tr>
+            <tr>
+                <td id="output"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="js/common.js"></script>
+    <script>
+        //one line arrow function 
+        let getVolume = (length,width,height) => length * width * height;
+        
+        
+        //multi line arrow function 
+        let calculateVolume = () => {
+            let length = val('length');
+            let width = val('width');
+            let height = val('height');
+            console.log(length,width,height);
+            let volume = getVolume(length,width,height); //calling arrow function
+            document.getElementById('output').innerHTML = `<h3>${volume}</h3>`;
+
+            val('length','');
+            val('width','');
+            val('height','');
+            return false;
+        }
+    </script>
+</body>
+
+</html>
