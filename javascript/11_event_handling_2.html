@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 80%;
+            margin: auto;
+        }
+
+        td {
+            width: 33.33%;
+            height: 100%;
+        }
+
+        tr {
+            height: 200px;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            font-size: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event handling using 2nd method</h1>
+    <table>
+        <tr>
+            <td>
+                <input type="button" value="" id="one" />
+            </td>
+            <td>
+                <input type="button" value="" id="two" />
+            </td>
+            <td>
+                <input type="button" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="" />
+            </td>
+            <td>
+                <input type="button" value="" />
+            </td>
+            <td>
+                <input type="button" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="" />
+            </td>
+            <td>
+                <input type="button" value="" />
+            </td>
+            <td>
+                <input type="button" value="" />
+            </td>
+        </tr>
+    </table>
+    <script>
+        //store reference of html tag in variable
+        // var one = document.getElementById('one');
+        // one.onclick = function()
+        // {
+        //     alert('one clicked');
+        // }
+        // var two = document.getElementById('two');
+        // two.onclick = function()
+        // {
+        //     alert('two clicked');
+        // }
+        let buttons = document.getElementsByTagName('input');
+        console.log(buttons);
+        let letter = 'X';
+        for (let position = 0; position < buttons.length; position++) {
+            console.log(position);
+            buttons[position].onclick = function(){
+                // alert('button clicked');
+                this.value = letter;
+                if(letter === 'X')
+                    letter = '0'
+                else 
+                    letter = 'X';
+            }
+        }
+    </script>
+</body>
+
+</html>
