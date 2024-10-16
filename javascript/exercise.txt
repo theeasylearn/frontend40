@@ -17,4 +17,7 @@
 
 7) write a program to calculate and display compound interest of given amount, rate, year 
 
-8)
+8) create object(1st technique) to store Amount,Rate,Year for sip calculator. add Method calculate Final value of sip. 
+
+9) create object(1st technique) to store billamount, gst rate for GST calculator. add Method calculate Net bill amount.
+

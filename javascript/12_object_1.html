@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1st method of creating object</h1>
+    <hr>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <script>
+        //create object 
+        var MyMath = {
+            //property variable, we can access it from any method of same object
+            num1 : 0,
+            num2 : 0,
+            convert:function()
+            {
+                this.num1 = parseInt(this.num1);
+                this.num2 = parseInt(this.num2);
+            },
+            input:function()
+            {
+                this.num1 = prompt("Enter first number",1);
+                this.num2 = prompt("Enter second number",1);
+                this.convert();
+            },
+            getAddition:function()
+            {
+                //local variable
+                let result = this.num1 + this.num2;
+                return result;
+            },
+            getSubtraction:function()
+            {
+                let result = this.num1 - this.num2;
+                return result;
+            }
+            // develop getMultiplication
+            // develope getdivision 
+        }   
+        //calling method of MyMath class
+        MyMath.input();
+        let addition = MyMath.getAddition();
+        let subtraction = MyMath.getSubtraction();
+        document.getElementById('add').innerHTML = "addition = " + addition;
+        document.getElementById('sub').innerHTML = "subtraction = " + subtraction;
+
+    </script>
+</body>
+</html>
