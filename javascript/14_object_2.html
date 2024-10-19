@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2nd method of creating object</h1>
+    <hr>
+    <script>
+        //2nd method to create object template
+        var Book = new Object({
+            //property variable
+            name:'',
+            author:'',
+            price:0,
+            pages:0,
+            display:function()
+            {
+                //display properties into console
+                console.log(this.name);
+                console.log(this.author);
+                console.log(this.price);
+                console.log(this.pages);
+            }
+        });
+
+        //create object using template
+        //var object = template 
+        var b1 = Book;
+        //set properties
+        b1.name = "the Atomic Habit";
+        b1.price = 100;
+        b1.author = "james clear";
+        b1.pages = 200;
+        b1.display();
+
+        //create 2nd object
+        var b2 = Book;
+        b2.name = "Rich dad poor dad";
+        b2.price = 200;
+        b2.author = "Robert k";
+        b2.pages = 500;
+
+        b2.display();
+
+        var b3 = Book;
+        b3.name = "HyperLearning";
+        b3.price = 300;
+        b3.author = "James Brown";
+        b3.pages = 1500;
+
+        b3.display();
+    </script>
+</body>
+</html>

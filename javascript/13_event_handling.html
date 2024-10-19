@@ -48,13 +48,9 @@
         var amount = document.getElementById('amount');
         var rate = document.getElementById('rate');
         var year = document.getElementById('year');
-        //event handling using 3rd method
-        amount.addEventListener("input", function () {
-            console.log(this.id, this.name, this.value);
-            if (amount.value === '' || rate.value === '' || year.value==='') {
-               alert('input is missing');
-            }
-            else 
+        function calculateInterest()
+        {
+            if (amount.value !== '' && rate.value !== '' && year.value!=='') 
             {
                 let p = parseInt(amount.value);
                 let r = parseInt(rate.value);
@@ -64,14 +60,21 @@
                 document.getElementById('interest').innerHTML = result;
                 document.getElementById('totalAmount').innerHTML = (p + result);
             }
+        }
+        //event handling using 3rd method
+        amount.addEventListener("input", function () {
+            console.log(this.id, this.name, this.value);
+            calculateInterest();
         }, false);
 
         rate.addEventListener("input", function () {
             console.log(this.id, this.name, this.value);
+            calculateInterest();
         }, false);
 
         year.addEventListener("input", function () {
             console.log(this.id, this.name, this.value);
+            calculateInterest();
         }, false);
 
 

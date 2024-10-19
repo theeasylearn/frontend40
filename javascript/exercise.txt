@@ -21,3 +21,13 @@
 
 9) create object(1st technique) to store billamount, gst rate for GST calculator. add Method calculate Net bill amount.
 
+
+10) create object(3rd technique) to store Amount,Rate,Year for sip calculator. add Method calculate Final value of sip. without using submit button. 
+
+11) create object(3rd technique) to store income tax related information. add Method calculate tax.  refer example given on https://groww.in/calculators/income-tax-calculator (use submit button)
+
+
+
+
+
+
