@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object creation using 3rd technique</h1>
+    <hr />
+    <b>to see output, use console</b>
+    <script>
+        //create object template 
+        function Book(nm,au,pr,pg)
+        {
+            //create property variable
+            this.name = nm,
+            this.price = pr, 
+            this.author = au, 
+            this.pages = pg,
+            this.display = function()
+            {
+                console.log(this.name);
+                console.log(this.author);
+                console.log(this.price);
+                console.log(this.pages);
+            } 
+        }
+
+        //create object 
+        //var object = new template();
+        var b1 = new Book('The atomic habit','James clear',100,200);
+        b1.display();
+
+        var b2 = new Book('Rich dad poor dad','Robert',200,250);
+        b2.display();
+    </script>
+</body>
+</html>

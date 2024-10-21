@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>4th way to create object</h1>
+    <hr/>
+    <script>
+        //es6 way to create object
+        class Product
+        {
+            constructor(name,price,quantity)
+            {
+                //property variable
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+                this.total = this.price * this.quantity;
+            }
+            display()
+            {
+                console.log(this.name);
+                console.log(this.price);
+                console.log(this.quantity);
+                console.log(this.total);
+            }
+        } 
+        //create object
+        //var object = new class()
+        var p1 = new Product("Pencil",10,100);
+        p1.display();
+        
+    </script>
+</body>
+</html>
