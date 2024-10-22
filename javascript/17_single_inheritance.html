@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>single level inheritance</h1>
+    <div id="root"></div>
+    <script>
+        //create class
+        //parent class
+        class Shape 
+        {
+            getPi()
+            {
+                return 3.14;
+            }
+            getSquare(num)
+            {
+                //local variable
+                let square = num * num;
+                return square;
+            }
+        }
+        //child class/derived class /sub class
+        class Circle extends Shape
+        {
+            constructor(radius)
+            {
+                super(); //calling parent class constructor (required)
+                this.radius = radius;
+            }
+            getArea()
+            {
+                let area = super.getPi() * super.getSquare(this.radius);
+                return area;
+            }
+        }
+
+        var radius = prompt("enter circle's radius",0);
+        
+        radius = parseInt(radius);
+        //create object using Circle class
+        var c1 = new Circle(radius);
+        let area = c1.getArea();
+        // document.getElementById('root').innerHTML = "Circle area = " + area;
+        document.getElementById('root').innerHTML = `Circle area = ${area}`;
+    </script>
+</body>
+</html>
