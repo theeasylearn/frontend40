@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hierarchical inheritance</h1>
+    <div id="root"></div>
+    <script>
+        //create class
+        //parent class
+        class Shape 
+        {
+            getPi()
+            {
+                return 3.14;
+            }
+            getSquare(num)
+            {
+                //local variable
+                let square = num * num;
+                return square;
+            }
+        }
+        //child class/derived class /sub class
+        class Circle extends Shape
+        {
+            constructor(radius)
+            {
+                super(); //calling parent class constructor (required)
+                this.radius = radius;
+            }
+            getArea()
+            {
+                let area = super.getPi() * super.getSquare(this.radius);
+                return area;
+            }
+        }
+        class Cylinder extends Shape 
+        {
+            constructor(radius,height)
+            {
+                super(); //required
+                this.radius = radius;
+                this.height = height;
+            }
+            getVolume()
+            {
+                let volume = super.getPi() * super.getSquare(this.radius) * this.height;
+                return volume;
+            }
+        }
+        var radius = prompt("enter cylinder's radius",0);
+        var height = prompt("enter cylinder's height",0);
+        
+        radius = parseInt(radius);
+        height = parseInt(height);
+        
+        var c1 = new Cylinder(radius,height);
+        var volume = c1.getVolume();
+
+        document.getElementById('root').innerHTML = `Cylinder Volume = ${volume} `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>multilevel inheritance</h1>
+    <div id="root"></div>
+    <script>
+        //create class
+        //parent class
+        class Shape 
+        {
+            getPi()
+            {
+                return 3.14;
+            }
+            getSquare(num)
+            {
+                //local variable
+                let square = num * num;
+                return square;
+            }
+        }
+        //child class/derived class /sub class
+        class Circle extends Shape
+        {
+            constructor(radius)
+            {
+                super(); //calling parent class constructor (required)
+                this.radius = radius;
+            }
+            getArea()
+            {
+                let area = super.getPi() * super.getSquare(this.radius);
+                return area;
+            }
+        }
+        //extend derived class circle
+        class Sphere extends Circle
+        {
+            constructor(radius)
+            {
+                super(radius); //calling parent class constructor (required)
+            }
+            getSurfaceArea()
+            {
+                //formula 4 * p * r * 2
+                let surfaceArea = 4 * super.getArea();
+                return surfaceArea;
+            }
+        }
+        var radius = prompt("enter sphere's radius",0);
+        
+        radius = parseInt(radius);
+        //create object using Circle class
+        var s1 = new Sphere(radius);
+        let area = s1.getArea(); //calling parent class method using child class object
+        let surfaceArea = s1.getSurfaceArea();
+        // document.getElementById('root').innerHTML = "Circle area = " + area;
+        document.getElementById('root').innerHTML = `Sphere area = ${area} surface area = ${surfaceArea}`;
+
+
+    </script>
+</body>
+</html>

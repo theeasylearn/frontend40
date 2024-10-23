@@ -26,7 +26,8 @@
 
 11) create object(3rd technique) to store income tax related information. add Method calculate tax.  refer example given on https://groww.in/calculators/income-tax-calculator (use submit button)
 
-
+inheritance
+--------------------------------------
 
 
 
