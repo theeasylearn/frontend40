@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>working with empty object & check property in object</h2>
+    <hr>
+    <div id="root"></div>
+    <script>
+        let user = {};
+        console.log(user);
+        //add properties
+        user.name = "Ankit";
+        user['surname'] = "Patel";
+        user.email = "ankit3385@gmail.com";
+        user['age'] = 39;
+        console.log(user);
+
+        //check whether country key exist or not
+
+        if (user.country === undefined) {
+            //this code will execute if
+            // country key does not exist
+            alert('country key does not exists');
+        }
+        else 
+        {
+            alert(user.country);
+        }
+        //2nd technique
+        if('country' in user)
+        {
+             //this code will execute if
+            // country key  exist
+            alert(user.country);
+        }
+        else 
+        {
+            alert('country key does not exists');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>functional binding</h1>
+    <b>use console</b>
+    <script>
+        let country = {
+            name:"India",
+            code:91,
+            capital:"delhi",
+            display:function()
+            {
+                console.log('function start....');
+                console.log(this.name,this.code,this.capital);
+                console.log('function ends....');
+            }
+        };
+
+        // country.display();
+        //create function alias
+        // let show = country.display; //wrong way 
+        // show();
+
+        //correct way
+        // var reference-variable-name= object.function-name.bind(object);
+        var show = country.display.bind(country);
+        show();
+    </script>
+</body>
+</html>
