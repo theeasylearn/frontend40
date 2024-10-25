@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>working with array in javascript</h1>
+    <table border="1" align="center" width="80%">
+        <tr>
+            <td id="first"></td>
+            <td id="second"></td>
+            <td id="third"></td>
+        </tr>
+    </table>
+    <script>
+        let numbers = [25,80,55,45,10,29,46,33,90,50];
+        //display each and every value in first as list
+        let first = document.getElementById('first');
+        let second = document.getElementById('second');
+        let third = document.getElementById('third');
+        let output='';
+        numbers.map(function(value){
+            console.log(value);
+            output += `<li>${value}</li>`;
+        });    
+        first.innerHTML = `<ol>${output}<ol>`;
+        let total = 0;
+        numbers.map(function(value){
+            total += value;
+        });
+        second.innerHTML = total;
+        let min = numbers[0];
+        let max = numbers[0];
+        numbers.map(function(value){
+            //logic to findout minimum and maximum 
+        });
+        //add min and max into third
+        
+    </script>
+</body>
+</html>

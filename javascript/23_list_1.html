@@ -8,11 +8,49 @@
 <body>
     <h1>working with list(array)</h1>
     <script>
-        let name = "Rut";
-        console.log(name);
+        // let name = "Rut";
+        // console.log(name);
 
-        name = "Vishwas";
-        console.log(name);
+        // name = "Vishwas";
+        // console.log(name);
+
+        let students = []; //empty array
+        let fruits = ['Apple','Banana','Mango','Pinapple','graps'];
+    //position(index)  0       1        2        3         4
+        console.log(fruits); //will display whole array
+        console.log("1st fruit",fruits[0]);
+        console.log('2nd fruit',fruits[1]);
+        console.log('last fruit',fruits[4]);
+
+        //add new value into student at end 
+        students.push('Krish');
+        students.push('Rut');
+        students.push('yash');
+        console.log(students);
+
+        students.unshift('Tushar'); //at the beginning
+        students.unshift('Ankit');
+        console.log(students);
+
+        //findout array/list size/length
+        console.log("size of students",students.length);
+        console.log("size of fruits",fruits.length);
+
+        //remove last position
+        let temp = fruits.pop();
+        console.log(fruits);
+
+        //remove 1 value from beginning
+        let position = 0;
+        let count = 1; 
+        fruits.splice(position,count); 
+        console.log(fruits);
+
+        //remove 2 value from beginning
+        position = 0;
+        count = 2;
+        fruits.splice(position,count); 
+        console.log(fruits);
     </script>
 </body>
 </html>

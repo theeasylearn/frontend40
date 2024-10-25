@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" align="center" width="80%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>javascript</th>
+                <th>total</th>
+                <th>Average</th>
+            </tr>
+        </thead>
+        <tbody id="output">
+
+        </tbody>
+    </table>
+    <script>
+        //array of object
+        let result = [
+            { name: 'ram', html: 60, css: 70, javascript: 80 },
+            { name: 'shyam', html: 75, css: 65, javascript: 85 },
+            { name: 'geeta', html: 80, css: 75, javascript: 90 },
+            { name: 'meena', html: 65, css: 60, javascript: 70 },
+            { name: 'raj', html: 85, css: 80, javascript: 88 },
+            { name: 'ritu', html: 78, css: 82, javascript: 75 },
+            { name: 'veer', html: 90, css: 85, javascript: 95 },
+            { name: 'sita', html: 70, css: 78, javascript: 82 },
+            { name: 'amit', html: 68, css: 64, javascript: 77 },
+            { name: 'kiran', html: 82, css: 75, javascript: 89 }
+        ];
+        let data = '';
+        result.map(function(student){
+            console.log(student);
+            let total = student.html  + student.css + student.javascript;
+            let average = (total/3).toFixed(2);
+            data += `<tr><td>${student.name}</td><td>${student.html}</td><td>${student.css}</td><td>${student.javascript}</td><td>${total}</td><td>${average}</td></tr>`;
+        });
+        document.getElementById('output').innerHTML = data;
+    </script>
+</body>
+
+</html>
