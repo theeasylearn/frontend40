@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ES6 Spread operator</h1>
+    <hr />
+    <b>use console</b>
+    <script>
+        //create list
+        var fruits = ['apple','banana','mango'];
+        var vegetables = ['potato','tomato','onion'];
+        
+        console.log(fruits);
+        console.log(vegetables);
+        
+        var food = [...fruits,...vegetables];
+        console.log(food);
+
+        //create 2 object 
+        var oldObject = {
+            name:"Apple I Phone 15",
+            price:101000,
+            weight:'250 grams'
+        };
+
+        var newObject = {
+            name:"Apple I Phone 16 pro max",
+            price:125000,
+            color:'black',
+            brand:'Apple',
+            year:2024
+        };
+        console.log(oldObject);
+        console.log(newObject);
+        //now let us create new object using both object 
+        var updatedObject = {...oldObject,...newObject};
+        console.log(updatedObject);
+
+        //empty array of object
+        let result = [];
+        console.log(result);
+        let student1 = { name: 'ram', html: 60, css: 70, javascript: 80 };
+        let student2 = { name: 'shyam', html: 75, css: 65, javascript: 85 };
+        let student3 = { name: 'geeta', html: 80, css: 75, javascript: 90 };
+        //add object at the end
+        result.push(student1);
+        //add object at the end using es6 operator 
+        result = [...result,student3];
+        //add object at the beginning
+        result.unshift(student2);
+        console.log(result);
+    </script>
+</body>
+</html>

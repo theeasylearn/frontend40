@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>example of for each loop</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row" id="shop">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        let products = [
+            {
+                name: 'Bed sheet',
+                price: 500,
+                size: "Double Bed",
+                material: "Cotton",
+                color: "Violet White",
+                pattern: "Floral",
+                brand: "Status Contract",
+                numberOfPieces: 3
+            },
+            {
+                name: 'Mixer',
+                price: 2500,
+                brand: "Philips",
+                color: "Black",
+                productDimensions: "37D x 21W x 26H Centimeters",
+                bladeMaterial: "Stainless Steel",
+                specialFeatures: ["Adjustable Speed Control", "Leak Proof"],
+                capacity: "1500 Milliliters",
+                controlsType: "Alloy",
+                itemWeight: "3 Kilograms",
+                modelName: "HL7756/00"
+            },
+            {
+                name: 'LAPTOP',
+                price: 125000,
+                brand: "HP",
+                modelName: "HP Laptop",
+                screenSize: "39.6 Centimetres",
+                color: "Silver i5 12th Gen - 16GB+512GB",
+                hardDiskSize: "512 GB",
+                cpuModel: "Intel Core i5",
+                ramMemoryInstalledSize: "16 GB",
+                operatingSystem: "Windows 11 Home",
+                specialFeature: "Anti Glare Screen",
+                graphicsCardDescription: "Integrated"
+            }
+        ];
+        var output = '';
+        products.map(function (item) {
+            // console.log(item);
+            let temp = '';
+            for (let property in item) {
+                //console.log(property, item[property]);
+                temp += `<li class="list-group-item d-flex justify-content-between">
+                                <h6>${property}</h6>
+                                <div>${item[property]}</div>
+                            </li>`;
+            }
+            output += `<div class="col-lg-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            ${temp}          
+                        </ul>
+                    </div>
+                </div>
+            </div>`
+            console.log(output);
+        });
+        document.getElementById('shop').innerHTML = output;
+    </script>
+</body>
+
+</html>

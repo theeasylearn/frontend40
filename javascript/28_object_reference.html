@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Reference & copying</h1>
+    <script>
+        //normal variable
+        var name = "ankit";
+        var anotherName = name;
+        console.log(name,anotherName);
+
+        //change name 
+        name = "Ankit Patel";
+        anotherName = "Nikunj bhatt";
+        console.log(name,anotherName);
+
+        let user = {
+            name: "Ankit",
+            age : 38,
+        };
+        // let anotherUser = user; //object reference wrong way
+        let anotherUser = {};
+        for(let key in user)
+        {
+            anotherUser[key] = user[key];
+        }
+        console.log('before change',user,anotherUser);
+        user.name = "Ankit Patel";
+        console.log('after change',user,anotherUser);
+
+    </script>
+</body>
+</html>
