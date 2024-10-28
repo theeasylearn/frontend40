@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>working with cookies</h1>
+    <h2>let us access cookies</h2>
+    <b>use console</b>
+    <input type="button" value="delete Cookies" onclick="deleteCookie();">
+    <hr>
+    <script src="cookies.js"></script>
+    <script>
+        //read cookies
+        var name = getCookie('name');
+        var age = getCookie('age');
+        var place = getCookie('place');
+        var year = getCookie('year');
+        console.log(name,age,place,year);
+
+        let deleteCookie = function() {
+            setCookie('place','',-10);
+            setCookie('year','',-100);
+            alert('cookies deleted....');
+        }
+    </script>
+</body>
+
+</html>

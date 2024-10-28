@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cookies Live example</h1>
+    <a href="file1.zip" onclick="return downloadGame()">Download Game 1</a>     
+    <a href="file2.zip" onclick="return downloadGame()">Download Game 2</a> 
+    <a href="file3.zip" onclick="return downloadGame()">Download Game 3</a> 
+    <a href="file4.zip" onclick="return downloadGame()">Download Game 4</a> 
+    <a href="file5.zip" onclick="return downloadGame()">Download Game 5</a> 
+
+    <script src="cookies.js"></script>
+    <script>
+        var count = 0; //global variable
+        function downloadGame()
+        {
+            if(count>=3)
+                return false;
+            else 
+                count++;
+        }
+    </script>
+</body>
+</html>
