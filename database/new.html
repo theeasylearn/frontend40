@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class pi{
+            pi(){
+                return 3.14;
+            }
+
+        }
+        class circle extends pi{
+            constructor(r){
+                super();
+                this.r = r;
+            }
+
+            area(){
+                let area = super.pi()*this.r*this.r ; 
+                return area;
+            }
+        }
+
+        var s1 = new circle(10.5);
+        var a=s1.area();
+        document.write(a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+sql quries
+-------------------------------
+
+create a table in db
+create table table_name(
+    id int primary key auto increment ,
+    name varchar(50),
+    age int,
+    mobile int
+);
+
+rename a table
+rename table oldname to newname
+
+1) insert
+add record to table
+    1. insert into table_name values([values]) 
+
+        examples
+        --------------------------------------
+        INSERT INTO students VALUES('',"param patel",19,'1234567890')
+        INSERT INTO students VALUES('',"devarsh patel",17,'1234567890')
+
+    2. insert INTO table_name([field name]) values([values])
+        insert into students(name,age,mobile) values("druv",23,0987654321)
+
+2) update
+update or change value of field
+
+update table_name set field_name = new value , [field_name = new value] where condition
+
+examples
+-----------------------------------
+update students set name = 'druv joshi' where name = 'druv ';
+UPDATE students set name = 'ankit patel',age=50 , mobile=0987654321 WHERE id=13 ; 
+
+UPDATE students 
+SET age = 25 
+WHERE id IN (4, 5);
+
+3) delete
+syntax
+---------
+delete from tablename [where condition]
+examples
+1) delete all rows from students tablel 
+delete from students 
+
+2) delete row from table as per condition
+   delete data of student whose id is 6
+   delete from students where id=6
+
+   delete karan from students 
+   delete from students where name='karan'
+
+   how to delete all rows from table and reset primary key 
+   truncate table students
+
+   how to remove table and its data 
+   drop table students 
+
+4)select *|<field_name> from table_name [where <condition>] [grop by <field_name>] [having <condition>] [order by <field_name>] [limit range] 
+
+select (how to fetch data from table(s))
+   how to fetch all fields and all rows from table 
+   examples
+   select * from customers 
+
+   how to fetch given number of records 
+   select * from customers limit 0,10
+
+   how to fetch next 10 records
+   select * from customers limit 10,10
+
+   how to fetch data in particular order 
+   select * from customers order by creditlimit desc limit 0,10
+
+   display data country wise 
+   select * from customers order by country limit 0,150
+
+   display data country wise, state wise  
+   select * from customers order by country,state limit 0,150
+
+      display data country wise, state wise,city wise  
+   select * from customers order by country,state,city limit 0,150
+
+   fetch first 5 customers name,number and creditlimit where creditlimit is greater than 10000
+   select customername,customernumber,creditlimit from customers where creditlimit>10000 limit 0,5
+
+   fetch all customername in desending order
+   SELECT customerName from customers ORDER BY customerName DESC; 
+   SELECT customerName from customers ORDER BY customerName DESC LIMIT 0,10;  
+
+   fetch first 3 maximum creditlimit customers name,number,creditlimit
+   select customernumber,customerName,creditlimit from customers ORDER by creditlimit desc limit 0,3
+
+   fetch maximum creditlimit customers all details
+   select * from customers ORDER by creditlimit desc limit 0,1
+
+   fetch customers name,number,creditlimit where creditlimit is between 50000,100000
+   select customerName,customernumber,creditlimit from customers where creditlimit>50000 and creditlimit<100000
+
+   select customerName,customernumber,creditlimit from customers where creditlimit>50000 and creditlimit<100000 order by creditLimit DESC LIMIT 0,1
+
+   fetch customernumber in accending order
+   select customernumber,customerName from customers order by customernumber
+
+    fetch all customers details whos county is usa,india
+    SELECT * FROM customers WHERE country='USA' OR country='India'
+    SELECT * FROM customers WHERE country in('USA','India')
+
+    fetch all customers details whos county is not usa,india
+    select * from customers where country!='USA' AND country!='India'
+    select * from customers where country not in('USA','India')
+
+agregate function - for only numeric field
+sum
+    find total amount of payment
+    SELECT SUM(amount) FROM payments
+    SELECT SUM(amount) as 'total amount' FROM payments
+
+avg
+    find average amount of payment
+    SELECT AVG(amount) as 'average amount' FROM payments
+
+count
+    find total number of customers
+    SELECT COUNT(*|<fieldname>) as "total customers" FROM customers
+
+    find number of customers who is from usa
+    SELECT count(*) AS 'USA customers' FROM customers WHERE country='USA'
+
+    find number of customers who is not from usa,india
+    SELECT COUNT(*) FROM customers WHERE country not in('USA','India')
+    
+min
+    find minimum amount from payment
+    select min(amount) as "min payment" from payments
+
+max
+    find maximum amount from payment
+    select max(amount) as "max payment" from payments
+
+find sum,avg,count,min,max of customers
+SELECT SUM(creditLimit) AS "total",AVG(creditLimit) AS "average",count(*) AS "count",MIN(creditLimit) as "min",MAX(creditLimit) AS "max" FROM customers;
+
+group by and having
+used for gouping
+
+find each customer total payment
+SELECT customerNumber,SUM(amount) as total  FROM payments GROUP BY customerNumber
+
+find count of customer that done payment
+select customerNumber,count(*) as count from payments group by customerNumber
+
+find those that make payment in year 2004
+SELECT paymentDate,customerNumber FROM payments WHERE paymentDate>='2004-01-01' AND paymentDate<='2004-12-31';
+
+having condition
+find those country which have less than 3 customers
+SELECT country,COUNT(*) FROM customers GROUP BY country HAVING COUNT(*)<4 ORDER BY country
+
+joins
+-----------------------------
+used when we have to join 2 or more table
+
+1) inner join
+    when we have to join 2 tables with its comman fields
+    
+    find customer number,name from customer table and paymentDate from payments table
+
+    select customerNumber,customerName from customers
+    select paymentDate from payments
+
+    
+
+
+
+2) left  join
+3) right  join
+4) cross join
+
