@@ -1,15 +1,19 @@
-//this module contains function to generate has of the given plain text password 
+//this module contains function to generate hash of the given plain text password 
 //template function to create class
-module.exports = function(PlainTextPassword,HashedPassword=null)
-{
-    this.PlainTextPassword = PlainTextPassword,
-    this.HashedPassword = HashedPassword,
-    this.getHashedPassword = function()
-    {
-        //in future this function will return Hashed Password
-        console.log('I will generate HashedPassword');
-    },
-    this.compareHashedPassword = function(){
-        console.log('I will compare PlainText Password and HashedPassword');
-    }
+var argon2 = require('@node-rs/argon2')
+module.exports = function (PlainTextPassword) {
+        this.getHashedPassword = async function (PlainTextPassword) {
+            var hash = await argon2.hash(PlainTextPassword)
+            return hash
+        },
+        this.compareHashedPassword = async function (HashedPassword,PlainTextPassword) {
+            try 
+            {
+                return await argon2.verify(HashedPassword,PlainTextPassword)
+            } 
+            catch (err) 
+            {
+                console.log(err)
+            }
+        }
 }
