@@ -1,5 +1,4 @@
 var http = require('http');
-const { json } = require('stream/consumers');
 /* 
     localhost:5000/ all products
     localhost:5000/toys return only toys products
