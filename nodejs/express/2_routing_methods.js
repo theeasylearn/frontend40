@@ -25,12 +25,16 @@ app.post(ROUTE,function(request,response){
 //localhost:5000/product 
 // purpose : to delete existing product 
 app.delete(ROUTE,function(request,response){
-    
+    products.pop(); //remove last element from array/list
+    response.json([{error:'no'},{message:'product deleted'}]);
 });
+
+
 //localhost:5000/product 
 // purpose : to update detail of existing product 
 app.put(ROUTE,function(request,response){
     
+    response.json([{error:'no'},{message:'product updated'}]);
 });
 //create route that accept request for non existing route (404)
 app.all("*",function(request,response){
