@@ -1,0 +1,13 @@
+1) Develop API to perform CRUD operation on contact
+    C  = CREATE means insert  (POST)
+    R =  RETRIEVE means select (GET)
+    U =  UPADATE means update (PUT)
+    D =  DELETE means delete (DELETE)
+name of the routes must be same but method should be as above mentioned
+    Store contact Name, email, Mobile, Skypeid 
+    in each api input validation is required
+
+2) make change in above example 
+    1) while doing insert/update operation make sure that email,mobile and skypeid is not duplicate 
+    2) RETRIEVE operation should be also possible by email/mobile/skypeid
+
