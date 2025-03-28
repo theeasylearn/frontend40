@@ -1,6 +1,6 @@
 var express = require('express');
-var bodyParser = require('body-parser');
 var app = express();
+var bodyParser = require('body-parser');
 //define middleware
 //require below 2 middleware to accept input submitted by post, put, delete method 
 app.use(express.urlencoded({ extended: true }));

@@ -33,15 +33,15 @@
             <p class="lead">We’d love to hear from you! Reach out to us using the form below.</p>
             <div class="row mt-4">
                 <div class="col-md-6 mx-auto">
-                    <form>
+                    <form method="post" action="http://localhost:5000/contactus">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input name="email" type="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
