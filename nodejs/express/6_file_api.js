@@ -25,6 +25,33 @@ app.get("/contactus",function(request,response){
     response.send(FileContent.toString());
 });
 
+app.post("/contactus",function(request,response){
+    var contactName = request.body.name;
+    var contactEmail = request.body.email;
+    var contactMessage = request.body.message;
+    if(!contactName || !contactEmail || !contactMessage)
+        response.send('input is missing, name, email, message required');
+    else 
+    {
+        const FILENAME = "contact.txt";
+        var content = "\nName " + contactName + " Email " + contactEmail + " Message " + contactMessage + "\n";
+        //fs.writeFileSync(FILENAME,content);
+        fs.appendFileSync(FILENAME,content);
+        response.redirect('http://localhost:5000/contactus?msg=content saved.'); 
+        //  fs.appendFile(FILENAME,content,function(error){
+        //     if(error)
+        //         response.redirect('http://localhost:5000/contactus?msg=content can not be saved.'); 
+        //     else 
+        //         response.redirect('http://localhost:5000/contactus?msg=content has been saved.'); 
+        // });
+    }
+});
+
+app.get("/delete",function(request,response){
+    
+    fs.unlinkSync('friends.txt');
+    response.send('file has been deleted');
+});
 //create route for product page
 app.get("/product",function(request,response){
     let FileContent = fs.readFileSync("product.html");
@@ -36,6 +63,14 @@ app.get("/service",function(request,response){
     let FileContent = fs.readFileSync("service.html");
     response.send(FileContent.toString());
 });
+app.get("/rename",function(request,response){
+    
+    var oldFileName = 'friends.txt';
+    var newFileName = 'mitro.txt';
+    fs.renameSync(oldFileName,newFileName);
+    response.send('file has been renamed');
+});
+
 
 //create route for not existing page 
 app.all("*",function(reqeust,response){

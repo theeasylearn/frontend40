@@ -54,6 +54,29 @@ app.post("/contactus",function(request,response){
     }
 });
 
+
+app.get("/delete",function(request,response){
+    
+    fs.unlink('friends.txt',function(error){
+        if(error)
+            response.send('file could not be deleted');
+        else 
+            response.send('file has been deleted');
+    });
+});
+
+app.get("/rename",function(request,response){
+    
+    var oldFileName = 'mitro.txt';
+    var newFileName = 'friends.txt';
+    fs.rename(oldFileName,newFileName,function(error){
+        if(error)
+            response.send('file could not be renamed');
+        else 
+            response.send('file has been renamed successfully');
+    });
+});
+
 //create route for product page
 app.get("/product",function(request,response){
     fs.readFile('product.html',function(error,Content){
